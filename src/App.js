@@ -1,13 +1,17 @@
 import React from "react";
-import Joke from "./Joke";
+import productsData from "./Products";
+import Product from "./ProductComponent";
+
 export default function App() {
-  return (
-    <div>
-      <Joke Question={"hello\n"} Punchline={"hi"} />
-      <Joke Question={"hello\n"} Punchline={"hi"} />
-      <Joke Question={"hello\n"} Punchline={"hi"} />
-      <Joke Question={"hello\n"} Punchline={"hi"} />
-      <Joke Question={""} Punchline={"hey"} />
-    </div>
-  );
+  const ProductMap = productsData.map(product => {
+    return (
+      <Product
+        key={product.id}
+        name={product.name}
+        price={product.price}
+        description={product.description}
+      />
+    );
+  });
+  return <div>{ProductMap}</div>;
 }
