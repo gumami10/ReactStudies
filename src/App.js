@@ -20,7 +20,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        {this.state.isLogged ? "You're logged" : "You're not logged"}
+        {!this.state.isLogged ? "You're logged" : "You're not logged"}
         <br />
         <Button
           loggedStatus={this.state.isLogged}
