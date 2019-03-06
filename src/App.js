@@ -24,8 +24,8 @@ class App extends Component {
       age: 0,
       gender: "",
       destination: "",
-      vegetarian: false,
-      vegan: false
+      vegan: false,
+      vegetarian: false
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -72,9 +72,9 @@ class App extends Component {
               value="female"
               checked={this.state.gender === "female"}
               onChange={this.handleChange}
-            />
+            />{" "}
+            Female
           </label>
-          Female
           <label htmlFor="">
             <input
               type="radio"
@@ -83,16 +83,18 @@ class App extends Component {
               checked={this.state.gender === "male"}
               onChange={this.handleChange}
             />
+            Male
           </label>
           <br />
           <select
-            name={this.state.destination}
+            value={this.state.destination}
             name="destination"
             onChange={this.handleChange}
           >
-            <option value="São Paulo">São Paulo</option>
-            <option value="Rio de Janeiro">Rio de Janeiro</option>
-            <option value="Sorocaba">Sorocaba</option>
+            <option value="">CHOSE YOU DESTINATION</option>
+            <option value="SP">São Paulo</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="SO">Sorocaba</option>
           </select>
           <br />
           <label>
